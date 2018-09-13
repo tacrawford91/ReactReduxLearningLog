@@ -1,42 +1,30 @@
 {
-  "name": "redux-simple-starter",
+  "name": "reactreduxlearninglog",
   "version": "1.0.0",
-  "description": "Simple starter package for Redux with React and Babel support",
-  "main": "index.js",
-  "repository": "git@github.com:StephenGrider/ReduxSimpleStarter.git",
+  "description": "My basic learning log rewritten utilizing React + Redux",
+  "main": "server.js",
   "engines": {
     "npm": "5.5.1",
     "node": "8.9.1"
   },
   "scripts": {
-    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
-    "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
-    "test:watch": "npm run test -- --watch"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "heroku-postbuild": "cd app && npm install && npm run build"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tacrawford91/ReactReduxLearningLog.git"
+  },
+  "author": "Troy A. Crawford",
   "license": "ISC",
-  "devDependencies": {
-    "babel-core": "^6.2.1",
-    "babel-loader": "^6.2.0",
-    "babel-preset-es2015": "^6.1.18",
-    "babel-preset-react": "^6.1.18",
-    "webpack": "^1.12.9",
-    "webpack-dev-server": "^1.14.0"
+  "bugs": {
+    "url": "https://github.com/tacrawford91/ReactReduxLearningLog/issues"
   },
+  "homepage": "https://github.com/tacrawford91/ReactReduxLearningLog#readme",
   "dependencies": {
-    "axios": "^0.18.0",
-    "babel-preset-stage-1": "^6.1.18",
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
-    "lodash": "^3.10.1",
-    "path": "^0.12.7",
-    "react": "16.3.2",
-    "react-dom": "16.3.2",
-    "react-redux": "5.0.7",
-    "react-router-dom": "^4.2.2",
-    "react-twitter-widgets": "^1.7.1",
-    "redux": "4.0.0",
-    "redux-form": "^6.6.3",
-    "redux-promise": "^0.6.0"
+    "path": "^0.12.7"
   }
 }
