@@ -7,11 +7,14 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 
+
 app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
 });
 
-app.get('/', (req,res) => {
-    const index = path.join(__dirname, 'public', 'index.html');
-    res.sendFile(index);
+// Serve up static assets
+app.use(express.static(path.join(__dirname, 'app', 'build')));
+
+app.get('*', (req,res) => {
+    res.sendFile('index.html');
 })
