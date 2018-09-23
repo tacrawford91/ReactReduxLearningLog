@@ -12,5 +12,6 @@ app.listen(PORT, function() {
 });
 
 app.get('/', (req,res) => {
-    res.sendFile(path.join(__dirname, './public/index.html'));
+    const index = path.join(__dirname, 'public', 'index.html');
+    res.sendFile(index);
 })
